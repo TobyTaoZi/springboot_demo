@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.demo.mapper.ListingMapper" >
+  <resultMap id="BaseResultMap" type="com.demo.model.Listing" >
+    <constructor >
+      <idArg column="LIST_ID" jdbcType="BIGINT" javaType="java.lang.Long" />
+      <arg column="LIST_NAME" jdbcType="CHAR" javaType="java.lang.String" />
+      <arg column="MERCHANT_ID" jdbcType="BIGINT" javaType="java.lang.Long" />
+      <arg column="MERCHANT_NAME" jdbcType="CHAR" javaType="java.lang.String" />
+      <arg column="STORE_NAME" jdbcType="CHAR" javaType="java.lang.String" />
+      <arg column="STORE_ID" jdbcType="BIGINT" javaType="java.lang.Long" />
+      <arg column="PRD_ID" jdbcType="BIGINT" javaType="java.lang.Long" />
+      <arg column="CATEGORY_ID" jdbcType="BIGINT" javaType="java.lang.Long" />
+      <arg column="STORE_CLS1" jdbcType="BIGINT" javaType="java.lang.Long" />
+      <arg column="STORE_CLS2" jdbcType="BIGINT" javaType="java.lang.Long" />
+      <arg column="STORE_CLS3" jdbcType="BIGINT" javaType="java.lang.Long" />
+      <arg column="BRAND" jdbcType="BIGINT" javaType="java.lang.Long" />
+      <arg column="WEIGHT" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="DEF_ITEM_ID" jdbcType="BIGINT" javaType="java.lang.Long" />
+      <arg column="DEF_IMG_URL" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="STORAGE" jdbcType="BIGINT" javaType="java.lang.Long" />
+      <arg column="SOLD_COUNT" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="CREATE_TIME" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="UPDATE_TIME" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="MIN_PRICE" jdbcType="REAL" javaType="java.lang.Float" />
+      <arg column="MAX_PRICE" jdbcType="REAL" javaType="java.lang.Float" />
+      <arg column="REQ_VAL1_IDS" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="REQ_VAL2_IDS" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="ATTRIBUTE" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="LIST_DESC" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="PROMOTION_IDS" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="TAG" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="DEL_FLAG" jdbcType="BIT" javaType="java.lang.Boolean" />
+      <arg column="STAR_ID" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="AD_ID" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="DC_CODE" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="DC_NAME" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="SINGLE" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="LIMIT_WAY" jdbcType="BIT" javaType="java.lang.Boolean" />
+      <arg column="LIMIT_NUM" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="FREIGHT" jdbcType="REAL" javaType="java.lang.Float" />
+      <arg column="INSURANCE" jdbcType="REAL" javaType="java.lang.Float" />
+      <arg column="OLD_PRICE" jdbcType="REAL" javaType="java.lang.Float" />
+      <arg column="PROMOTION_DESC" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="DELIVERY_TYPE" jdbcType="BIT" javaType="java.lang.Boolean" />
+      <arg column="SERACH_TAG" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="START_SHIPMENT_DATE" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="END_SHIPMENT_DATE" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="COLOR_DISPLAY_TYPE" jdbcType="BIT" javaType="java.lang.Boolean" />
+      <arg column="MERCHANT_STORAGE" jdbcType="BIGINT" javaType="java.lang.Long" />
+      <arg column="ARRIVAL_DATE" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="DELIVERY_MIN_DAY" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="DELIVERY_MAX_DAY" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="LIST_NUMBER" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="PRICE_APPROVED_STATE" jdbcType="BIT" javaType="java.lang.Boolean" />
+      <arg column="OPERATE_STATE_TIME" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="TAX" jdbcType="REAL" javaType="java.lang.Float" />
+      <arg column="LISTING_SOURCE" jdbcType="BIT" javaType="java.lang.Boolean" />
+      <arg column="PACKAGE_COUNT" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="SALE_MODE" jdbcType="SMALLINT" javaType="java.lang.Short" />
+      <arg column="LISTING_TYPE" jdbcType="BIT" javaType="java.lang.Boolean" />
+      <arg column="LISTING_FLAG" jdbcType="BIT" javaType="java.lang.Boolean" />
+      <arg column="SEARCH_ENGINE_FLAG" jdbcType="BIT" javaType="java.lang.Boolean" />
+      <arg column="LISTING_STATE" jdbcType="BIT" javaType="java.lang.Boolean" />
+      <arg column="STANDARD_ATTRIBUTE_IDS" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="LABELS" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="PURCHASE_PRICE" jdbcType="REAL" javaType="java.lang.Float" />
+      <arg column="SETTLEMENT_TYPE" jdbcType="BIT" javaType="java.lang.Boolean" />
+      <arg column="SETTLEMENT_POINT" jdbcType="REAL" javaType="java.lang.Float" />
+      <arg column="SHIPMENT_TYPE" jdbcType="BIT" javaType="java.lang.Boolean" />
+      <arg column="NATIONAL_STANDARD_NUMBER" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="IMG_URLS" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="PRICE_APPROVED_TIME" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="FIRST_ONLINE_TIME" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="LIST_PACKAGE_NAME" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="PACKAGE_TYPE" jdbcType="BIT" javaType="java.lang.Boolean" />
+      <arg column="STORE_SORT_NUM" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="LIST_PROMOTION_NAME" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="EXPIRY_VALUE" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="ORGIN_PLACE" jdbcType="TINYINT" javaType="java.lang.Byte" />
+      <arg column="SEARCH_OPTION" jdbcType="BIT" javaType="java.lang.Boolean" />
+      <arg column="PACKAGE_WEIGHT" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="NETPROFIT" jdbcType="REAL" javaType="java.lang.Float" />
+      <arg column="DES_PURPRICE" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="SALE_LIMITNUM" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="PRICE_SEARCH_FACTOR" jdbcType="REAL" javaType="java.lang.Float" />
+      <arg column="LOGISTICS_WAY" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="PACKAGE_SIZE" jdbcType="REAL" javaType="java.lang.Float" />
+      <arg column="PACKAGE_SIZE_INFO" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="ULE_CARD_PAY" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="MERCHANT_FREIGHT_PAY" jdbcType="DOUBLE" javaType="java.lang.Double" />
+      <arg column="PREPARE_CARGO_TIME" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="OTHER_LIST_ID" jdbcType="BIGINT" javaType="java.lang.Long" />
+      <arg column="LOCAL_SPECIALTY" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="OLD_LIST_ID" jdbcType="BIGINT" javaType="java.lang.Long" />
+      <arg column="SELL_UNIT" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="BOX_SELL" jdbcType="BIT" javaType="java.lang.Boolean" />
+      <arg column="SELL_UNIT_SINGLE" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="OFFLINE_CODE" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="ONLINEABLE_TIME" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="REMARK" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="LIST_BARGAINING" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="PRICE_COMPARE" jdbcType="BIT" javaType="java.lang.Boolean" />
+      <arg column="GENERAL_FLAG" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="SALE_CHANNELS_ID" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="SALE_CHANNEL_NAME" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="DIRECT_PROVINCE" jdbcType="BIGINT" javaType="java.lang.Long" />
+      <arg column="ALLOW_CHANGE_PRICE" jdbcType="BIT" javaType="java.lang.Boolean" />
+      <arg column="AUTOMATE_SHELVE" jdbcType="BIT" javaType="java.lang.Boolean" />
+      <arg column="AUTOMATE_SHELVE_HOUR" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="ZONE_PROPOSAL_FLAG" jdbcType="BIT" javaType="java.lang.Boolean" />
+      <arg column="JQ_LIST_DESC" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="AGENCY_RATE" jdbcType="REAL" javaType="java.lang.Float" />
+      <arg column="MD5_VERIFY" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="PROMOTION_DESC_TWO" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="IS_EMS_FREIGHT" jdbcType="BIT" javaType="java.lang.Boolean" />
+      <arg column="IS_RETURN_SEVENDAYS" jdbcType="BIT" javaType="java.lang.Boolean" />
+      <arg column="LISTING_TAG" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="VIDEO_URL" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="SETTLEMENT_PERCENT" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="THIRD_PLATFORM_ID" jdbcType="BIT" javaType="java.lang.Boolean" />
+      <arg column="THIRD_PRD_ID" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="THIRD_PRODUCT_ID" jdbcType="BIGINT" javaType="java.lang.Long" />
+      <arg column="THIRD_PRODUCT_PRICE" jdbcType="REAL" javaType="java.lang.Float" />
+      <arg column="TAKE_WAY" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="VALID_PERIOD" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="CUZ_FREIGHT_TEMPLATE_ID" jdbcType="BIGINT" javaType="java.lang.Long" />
+      <arg column="PAYMENT_TYPE" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="STORAGE_STATE" jdbcType="BIT" javaType="java.lang.Boolean" />
+    </constructor>
+  </resultMap>
+  <sql id="Base_Column_List" >
+    LIST_ID, LIST_NAME, MERCHANT_ID, MERCHANT_NAME, STORE_NAME, STORE_ID, PRD_ID, CATEGORY_ID, 
+    STORE_CLS1, STORE_CLS2, STORE_CLS3, BRAND, WEIGHT, DEF_ITEM_ID, DEF_IMG_URL, STORAGE, 
+    SOLD_COUNT, CREATE_TIME, UPDATE_TIME, MIN_PRICE, MAX_PRICE, REQ_VAL1_IDS, REQ_VAL2_IDS, 
+    ATTRIBUTE, LIST_DESC, PROMOTION_IDS, TAG, DEL_FLAG, STAR_ID, AD_ID, DC_CODE, DC_NAME, 
+    SINGLE, LIMIT_WAY, LIMIT_NUM, FREIGHT, INSURANCE, OLD_PRICE, PROMOTION_DESC, DELIVERY_TYPE, 
+    SERACH_TAG, START_SHIPMENT_DATE, END_SHIPMENT_DATE, COLOR_DISPLAY_TYPE, MERCHANT_STORAGE, 
+    ARRIVAL_DATE, DELIVERY_MIN_DAY, DELIVERY_MAX_DAY, LIST_NUMBER, PRICE_APPROVED_STATE, 
+    OPERATE_STATE_TIME, TAX, LISTING_SOURCE, PACKAGE_COUNT, SALE_MODE, LISTING_TYPE, 
+    LISTING_FLAG, SEARCH_ENGINE_FLAG, LISTING_STATE, STANDARD_ATTRIBUTE_IDS, LABELS, 
+    PURCHASE_PRICE, SETTLEMENT_TYPE, SETTLEMENT_POINT, SHIPMENT_TYPE, NATIONAL_STANDARD_NUMBER, 
+    IMG_URLS, PRICE_APPROVED_TIME, FIRST_ONLINE_TIME, LIST_PACKAGE_NAME, PACKAGE_TYPE, 
+    STORE_SORT_NUM, LIST_PROMOTION_NAME, EXPIRY_VALUE, ORGIN_PLACE, SEARCH_OPTION, PACKAGE_WEIGHT, 
+    NETPROFIT, DES_PURPRICE, SALE_LIMITNUM, PRICE_SEARCH_FACTOR, LOGISTICS_WAY, PACKAGE_SIZE, 
+    PACKAGE_SIZE_INFO, ULE_CARD_PAY, MERCHANT_FREIGHT_PAY, PREPARE_CARGO_TIME, OTHER_LIST_ID, 
+    LOCAL_SPECIALTY, OLD_LIST_ID, SELL_UNIT, BOX_SELL, SELL_UNIT_SINGLE, OFFLINE_CODE, 
+    ONLINEABLE_TIME, REMARK, LIST_BARGAINING, PRICE_COMPARE, GENERAL_FLAG, SALE_CHANNELS_ID, 
+    SALE_CHANNEL_NAME, DIRECT_PROVINCE, ALLOW_CHANGE_PRICE, AUTOMATE_SHELVE, AUTOMATE_SHELVE_HOUR, 
+    ZONE_PROPOSAL_FLAG, JQ_LIST_DESC, AGENCY_RATE, MD5_VERIFY, PROMOTION_DESC_TWO, IS_EMS_FREIGHT, 
+    IS_RETURN_SEVENDAYS, LISTING_TAG, VIDEO_URL, SETTLEMENT_PERCENT, THIRD_PLATFORM_ID, 
+    THIRD_PRD_ID, THIRD_PRODUCT_ID, THIRD_PRODUCT_PRICE, TAKE_WAY, VALID_PERIOD, CUZ_FREIGHT_TEMPLATE_ID, 
+    PAYMENT_TYPE, STORAGE_STATE
+  </sql>
+
+</mapper>
