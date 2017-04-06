@@ -1,0 +1,2 @@
+SpringBootApplication.java 为内置Tomcat启动 用内部Tomcat启动时需要将pom.xml中引用的Tomcat包去掉
+SpringBootApplication2.java 为外置Tomcat启动 
